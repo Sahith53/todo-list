@@ -1,0 +1,57 @@
+    h1{
+        color: red;
+    }
+    .completed{
+        color: gray;
+        text-decoration: line-through;
+    }
+    body {
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+        text-align: center;
+    }
+
+    .todoItems {
+        list-style: none;
+        padding: 0;
+    }
+
+    .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .completed {
+        text-decoration: line-through;
+    }
+
+    .input-group {
+        margin-bottom: 20px;
+    }
+
+    .input-group-append {
+        display: flex;
+        align-items: center;
+    }
+
+    .btn-primary {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
