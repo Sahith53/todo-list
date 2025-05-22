@@ -1,7 +1,6 @@
-
 # Modern Todo List Application
 
-A full-stack Todo List application built with React, TypeScript, and Node.js. This application allows users to manage their tasks with features like priority levels, due dates, and task status tracking.
+A full-stack Todo List application built with React, TypeScript, and Node.js. This application features advanced task management with Slack integration for notifications and Google's Gemini AI API for intelligent task summarization.
 
 ## 🚀 Features
 
@@ -12,6 +11,12 @@ A full-stack Todo List application built with React, TypeScript, and Node.js. Th
 - 🎨 Modern and responsive UI
 - 🌈 Visual priority indicators
 - 📱 Mobile-friendly design
+- 🤖 AI-Powered Task Summarization using Gemini API
+- 💬 Slack Integration Features:
+  - Receive task notifications in your Slack channel
+  - Daily task summaries
+  - Due date reminders
+  - Priority task alerts
 
 ## 🏗️ Tech Stack
 
@@ -25,6 +30,10 @@ A full-stack Todo List application built with React, TypeScript, and Node.js. Th
 - Express.js
 - Prisma ORM
 - SQLite database
+
+### Integrations
+- 🤖 Google Gemini API for AI task summarization
+- 💬 Slack API for notifications and reminders
 
 ## 📦 Project Structure
 
@@ -101,6 +110,15 @@ The application will be available at `http://localhost:5173`
 - `PUT /api/todos/:id` - Update a todo
 - `DELETE /api/todos/:id` - Delete a todo
 
+### Summary
+- `GET /api/summary` - Get AI-generated summary of all tasks
+- `GET /api/summary/daily` - Get daily task summary
+- `GET /api/summary/priority` - Get summary of priority tasks
+
+### Slack Integration
+- `POST /api/slack/notify` - Send task notification to Slack
+- `POST /api/slack/summary` - Send task summary to Slack
+
 ## 💡 Usage
 
 1. **Creating a Todo**
@@ -120,6 +138,27 @@ The application will be available at `http://localhost:5173`
 4. **Deleting a Todo**
    - Click the delete icon on any todo
    - Confirm the deletion
+
+### Task Summarization
+- Click the "Generate Summary" button to get an AI-powered overview of your tasks
+- Summaries include:
+  - Task grouping by priority
+  - Upcoming deadlines
+  - Progress tracking
+  - Time management suggestions
+
+### Slack Integration
+1. **Setting up Slack**
+   - Go to Settings
+   - Click "Connect to Slack"
+   - Authorize the application
+   - Select your preferred notification channel
+
+2. **Notification Settings**
+   - Configure notification preferences
+   - Set summary delivery schedule
+   - Choose priority levels for notifications
+   - Enable/disable specific notification types
 
 ## 🎨 UI Features
 
@@ -150,3 +189,20 @@ Sahith53
 - Material-UI for the beautiful components
 - React community for the amazing tools
 - All contributors who help improve this project
+
+## 🔐 Environment Setup
+
+Create a `.env` file in the backend directory with the following variables:
+
+```env
+# Database
+DATABASE_URL="file:./dev.db"
+
+# Gemini AI API
+GEMINI_API_KEY=your_gemini_api_key
+
+# Slack Integration
+SLACK_BOT_TOKEN=your_slack_bot_token
+SLACK_SIGNING_SECRET=your_slack_signing_secret
+SLACK_CHANNEL_ID=your_channel_id
+```
